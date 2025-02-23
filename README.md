@@ -1,0 +1,1 @@
+ Using JavaScript class-based object-oriented programming (OOP) skills by working with class structures, inheritance, and methods in a business-related inventory management system to understand how to structure data and operations for managing products and orders.
