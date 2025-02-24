@@ -72,7 +72,18 @@ class Inventory {
         this.orders.forEach(order=>console.log(order.getOrderDetails()))
     };//log all placed orders
 
-}
+   
+    
+//Task 5 Implementing Product Restocking
+
+    restockProduct(productID, quantity){
+        let product=this.products.find((product)=>product.id===productID)
+        if(product){
+        product.stock+=quantity
+        }
+    };//increases stock when restocking product
+
+};//end of inventory class
 
 
 //test task 3
@@ -87,3 +98,8 @@ inventory.listOrders();
 // Expected output: "Order ID: 601, Product: Laptop, Quantity: 2, Total Price: $2400"
 console.log(prod1.getDetails());
 // Expected output: "Product: Laptop, ID: 101, Price: $1200, Stock: 3"
+
+//test task 5
+inventory.restockProduct(101, 5);
+console.log(prod1.getDetails()); 
+// Expected output: "Product: Laptop, ID: 101, Price: $1200, Stock: 8"
